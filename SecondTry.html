@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week Nine Project</title>
+    <script src="echarts.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 100vw;height:60vw;"></div>
+<script>
+    const container=document.getElementById('main')
+    const treemap = echarts.init(container)
+    const option= {
+        title: {
+            text: "Treemap Visualization",
+            textStyle: {
+                fontSize: 100
+            }
+        },
+        series: {
+            type: "treemap",
+            visibleMin:300,
+
+            data: [{
+                name: "A",
+                children: [{name: "B"}, {name: "C"}]
+            },
+                {
+                    name: "B",
+                    children:[{name: "D", value: 30}, {name: "E", value: 50}]
+                },
+                {
+                    name: "C",
+                    children:[{name: "D", value: 20}, {name: "E", value: 40}, {name: "F", value: 60}]
+                }],
+            levels: [{
+                itemStyle: {
+                    borderColor: '#555',
+                    borderWidth: 20,
+                    gapWidth: 100
+                },
+                upperLabel: {
+                    show: false
+                }
+            }],
+        }
+
+    };
+    treemap.setOption(option,true)
+</script>
+
+</body>
+</html>

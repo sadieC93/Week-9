@@ -1,0 +1,39 @@
+[
+  {
+    "name": "",
+    "childColumn": "A"
+  },
+  {
+    "name": "A",
+    "childColumn": "B"
+  },
+  {
+    "name": "A",
+    "childColumn": "C"
+  },
+  {
+    "name": "B",
+    "childColumn": "D",
+    "val": 30
+  },
+  {
+    "name": "B",
+    "childColumn": "E",
+    "val": 50
+  },
+  {
+    "name": "C",
+    "childColumn": "F",
+    "val": 20
+  },
+  {
+    "name": "C",
+    "childColumn": "G",
+    "val": 40
+  },
+  {
+    "name": "C",
+    "childColumn": "H",
+    "val": 60
+  }
+]
